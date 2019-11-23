@@ -1,0 +1,17 @@
+﻿<Window x:Class="EjTroopers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjTroopers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="400">
+        <Label Content="Troopers" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,0,0,0"/>
+        <Grid Height="300" >
+            <TextBox x:Name="nTrooper" HorizontalAlignment="Left" Margin="30,20,0,260" Height="20" Width="110" VerticalContentAlignment="Top" Text="{Binding nameTrooper, UpdateSourceTrigger=PropertyChanged}"/>
+            <ListBox x:Name="ListTrooper" HorizontalAlignment="Left" Margin="30,0,0,30" Height="200" Width="110" VerticalAlignment="Bottom" ItemsSource="{Binding ListTrooper ,UpdateSourceTrigger=PropertyChanged}" />
+            <Button Width="80" Height="20" Margin="200,70,500,200" Content="Buscar" Click="{Binding SearchCommand}"/>
+        </Grid>
+    </Grid>
+</Window>
